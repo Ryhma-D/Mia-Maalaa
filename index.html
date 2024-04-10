@@ -4,10 +4,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Mia Maalaa</title>
+        
+         <!-- yhditetään css tiedosto -->
         <script type="text/css" language="css" src="style.css"></script>
+
+        <!-- mahdollistetaan kirjautuminen -->
+        <script type="text/javascript" language="javascript" src="kirjautuminen.JS"></script>
+
+        <title>Mia Maalaa</title>
     </head>
     <body>
+        <!-- Navigointi -->
+
+        <form id="kirjautumis_lomake">
+            <input type="text" id="nimi" placeholder="Syötä nimesi" value="" />
+            <input type="submit" id="kirjaudu_nappi" value="Kirjaudu sisään" onclick="kirjaudu()" />
+        </form>
+        <form id="kirjaudu_ulos">
+            <input type="submit" id="kirjaudu_ulos_nappi" value="Kirjaudu ulos" onclick="kirjaudu_ulos()" />
+        </form>
+
+        <!-- Navigointi END -->
+
+        <!-- Footer -->
+
+        <!-- Footer END -->
         
     </dody>
 </html>
