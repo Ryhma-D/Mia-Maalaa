@@ -42,7 +42,7 @@ a{outline:none; text-decoration:none;}
 .fl_left, .imgl{float:left;}
 .fl_right, .imgr{float:right;}
 
-img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; border-radius: 50%; line-height:normal; vertical-align:middle;}
 .imgl{margin:0 15px 10px 0; clear:left;}
 .imgr{margin:0 0 10px 15px; clear:right;}
 
@@ -92,7 +92,7 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 --------------------------------------------------------------------------------------------------------------- */
 .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 3.06748466257669%; list-style:none;}
 
-.first{margin-left:0; clear:left;}
+.first{margin-left:0; clear:left; padding: 30px; text-align: center;}
 
 .one_quarter{width:22.69938650306748%;}
 .one_third{width:31.28834355828221%;}
