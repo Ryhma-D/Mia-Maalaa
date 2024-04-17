@@ -1,17 +1,28 @@
 #body {
     margin: 0;
+    background-color: #f5f1ea;
 }
+/* FONTIT */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+p, a {
+    font-family: 'Merriweather', serif;
+}
+/* E N D FONTIT E N D */
+
+
 
 /* NAVIGOINTI
 ------------------------------------------------------------*/
 
 .tausta {
-    background-image: url(kuvia/galleria.jpeg);
+    background-image: url(kuvat/galleria6.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: auto;
     max-width: 100%;
-    height: 250px;
+    height: 400px;
 }
 
 .otsikko {
@@ -23,6 +34,7 @@
 .navbar {
     overflow: hidden;
     display: table;
+    width: 100%;
 }
 
 .navbar a:hover:not(.active) {
@@ -49,6 +61,7 @@
 .fl-right {
     text-align: right;
 }
+
 
 .navbar li {
     display:inline-block; 
