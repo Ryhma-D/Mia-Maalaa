@@ -38,7 +38,7 @@ p, a {
 }
 
 .navbar a:hover:not(.active) {
-    background-color: red;
+    background-color: #6f4521;
     
 }
 
