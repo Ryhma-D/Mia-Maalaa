@@ -1,0 +1,150 @@
+#body {
+    margin: 0;
+}
+
+/* NAVIGOINTI
+------------------------------------------------------------*/
+
+.tausta {
+    background-image: url(kuvia/galleria.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: auto;
+    max-width: 100%;
+    height: 250px;
+}
+
+.otsikko {
+    color: white;
+    float: left;
+    text-transform: uppercase;
+}
+
+.navbar {
+    overflow: hidden;
+    display: table;
+}
+
+.navbar a:hover:not(.active) {
+    background-color: red;
+    
+}
+
+.navbar ul {
+    position: -webkit-sticky; /* safari */
+    position: sticky;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.fl-center {
+    text-align: center;
+}
+.fl-left{
+    text-align: left;
+}
+
+.fl-right {
+    text-align: right;
+}
+
+.navbar li {
+    display:inline-block; 
+    position:relative; 
+    margin:0 15px 0 0; 
+    padding:0;
+}
+
+ .navbar li a {
+    display: block;
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+ }
+ @media screen and (max-width: 600px) {
+    .navbar, 
+    ul.nav {float: none;}
+  }
+
+
+/* E N D NAVIGOINTI
+-------------------------------------------------------------*/
+
+/* TAPATHTUMA
+-------------------------------------------------------------*/
+.tapahtumat {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    border: 3px solid red;
+}
+
+.valiotsikko {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* E N D TAPAHTUMAT
+--------------------------------------------------------------*/
+/* TAITEILIJAT
+-------------------------------------------------------------*/
+.taiteilijat {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    border: 3px solid purple;
+}
+
+.valiotsikko {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* E N D TAITEILIJAT
+--------------------------------------------------------------*/
+/* TIETOA MIASTA
+-------------------------------------------------------------*/
+.tietoa {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    border: 3px solid brown;
+}
+
+.valiotsikko {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* E N D TIETOA MIASTA
+--------------------------------------------------------------*/
+/* YHTEYSTIEDOT
+-------------------------------------------------------------*/
+.yhteystiedot {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    border: 3px solid green;
+}
+
+.valiotsikko {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* E N D YHTEYSTIEDOT
+--------------------------------------------------------------*/
+/* FOOTER
+-------------------------------------------------------------*/
+.footer {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    border: 3px solid blue;
+}
+
+/* E N D FOOTER
+--------------------------------------------------------------*/
