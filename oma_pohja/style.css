@@ -118,6 +118,14 @@ p, a {
     text-align: center;
 }
 
+.taiteilija_vasen{
+    float: left;
+}
+
+.taiteilija_oikea {
+    float: right;
+}
+
 /* E N D TAITEILIJAT
 --------------------------------------------------------------*/
 /* TIETOA MIASTA
@@ -134,6 +142,14 @@ p, a {
     font-size: 20px;
     text-align: center;
 }
+
+.mia {
+    height: 150px;
+    border-radius: 60%;
+    float: right;
+}
+
+
 
 /* E N D TIETOA MIASTA
 --------------------------------------------------------------*/
@@ -152,6 +168,12 @@ p, a {
     text-align: center;
 }
 
+.jotain {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 /* E N D YHTEYSTIEDOT
 --------------------------------------------------------------*/
 /* FOOTER
