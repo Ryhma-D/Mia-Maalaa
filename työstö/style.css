@@ -136,6 +136,10 @@ p, a {
     text-align: center;
 }
 
+.rivi2 {
+    display: flex;
+}
+
 .taiteilija_vasen{
     float: left;
 }
