@@ -138,6 +138,9 @@ p, a {
 
 .rivi2 {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .taiteilija_vasen{
@@ -167,11 +170,20 @@ p, a {
     text-align: center;
 }
 
-.mia {
-    height: 150px;
-    border-radius: 60%;
-    float: right;
+.rivi3 {
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.kuva_mia{
+    padding-left: 80px;
+}
+
+.mia {
+    height: 220px;
+    border-radius: 60%;
+}
+
 
 
 
