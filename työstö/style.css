@@ -124,7 +124,7 @@ height: 300px;
 /* TAITEILIJAT
 -------------------------------------------------------------*/
 .taiteilijat {
-    height: 400px;
+    height: 500px;
     width: auto;
     max-width: 100%;
     border: 3px solid purple;
@@ -141,7 +141,8 @@ height: 300px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+    padding-top: 40px;
 }
 
 .taiteilija_vasen{
@@ -150,20 +151,25 @@ height: 300px;
 }
 .kuva_aino{
     float: left;
-    width: 150px;
-    height: 150px;
-    padding-right: 20px;
+    width: 200px;
+    height: 250px;
+    padding-right: 40px;
+    padding-top: 20px;
 
 }
 .taiteilija_oikea {
     float: right;
+    width: 30%;
 }
 .kuva_leo{
     float: left;
-    width: 150px;
-    height: 150px;
-    padding-right: 20px;
+    width: 200px;
+    height: 250px;
+    padding-right: 40px;
 
+}
+.taiteilijan_teksti{
+   
 }
 /* E N D TAITEILIJAT
 --------------------------------------------------------------*/
