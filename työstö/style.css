@@ -139,6 +139,14 @@ p, a {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    padding-left: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    color: black;
+    border-style: solid;
+    border-color: #c5ab94;
 }
 
 .näyttelyt_nyt {
