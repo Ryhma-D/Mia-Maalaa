@@ -177,6 +177,14 @@ p, a {
     align-items: center;
 }
 
+.kuva_ainosta .kuva_aino {
+    border-radius: 50%;
+}
+
+.kuva_leosta .kuva_leo {
+    border-radius: 50%;
+}
+
 .taiteilija_oikea {
     display: flex;
     flex-wrap: wrap;
@@ -218,22 +226,22 @@ p, a {
 --------------------------------------------------------------*/
 
 
-/* YHTEYSTIEDOT
+/* OTA YHTEYTTÄ
 -------------------------------------------------------------*/
 
 
-/* E N D YHTEYSTIEDOT
+/* E N D OTA YHTEYTTÄ
 --------------------------------------------------------------*/
 
 
 /* FOOTER
 -------------------------------------------------------------*/
 
-.yhteystiedot {
+.footer {
     background-color: #c5ab94;
 }
 
-.yhteystiedot .valiotsikko {
+.footer .valiotsikko {
     text-align: center;
 }
 
@@ -262,6 +270,29 @@ p, a {
 .aukioloajat{
     text-align: center;
 }
+
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    background-color: #6f4521;
+  }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
 
 
 /* E N D FOOTER
