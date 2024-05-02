@@ -142,7 +142,7 @@ p, a {
     padding-left: 50px;
 }
 
-table {
+.tapahtumat table {
     border-collapse: collapse;
     color: black;
     border-style: solid;
@@ -220,11 +220,24 @@ table {
 
 /* YHTEYSTIEDOT
 -------------------------------------------------------------*/
+
+
+/* E N D YHTEYSTIEDOT
+--------------------------------------------------------------*/
+
+
+/* FOOTER
+-------------------------------------------------------------*/
+
+.yhteystiedot {
+    background-color: #c5ab94;
+}
+
 .yhteystiedot .valiotsikko {
     text-align: center;
 }
 
-.rivi4 {
+.rivi5 {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -236,8 +249,8 @@ table {
 }
 
 .maps {
-    height: 250px;
-    width: 300px;
+    height: 85%;
+    width: 85%;
     border-radius: 50%;
     padding-bottom: 16px;
 }
@@ -249,13 +262,6 @@ table {
 .aukioloajat{
     text-align: center;
 }
-
-/* E N D YHTEYSTIEDOT
---------------------------------------------------------------*/
-
-
-/* FOOTER
--------------------------------------------------------------*/
 
 
 /* E N D FOOTER
