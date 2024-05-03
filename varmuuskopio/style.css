@@ -1,3 +1,57 @@
+/* KOKEILUJA RESPONSIIVISUUTEEN 
+----------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+.nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*= "col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-2 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+/*--------------------------------------
+-----------------------------------------*/
 #body {
     margin: 0;
     background-color: #f5f1ea;
@@ -11,18 +65,16 @@ p, a {
 }
 /* E N D FONTIT E N D */
 
-
-
 /* NAVIGOINTI
 ------------------------------------------------------------*/
 
 .tausta {
     background-image: url(kuvat/galleria6.png);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: 100% 100%;
-    width: auto;
+    width: 100%;
     max-width: 100%;
-    height: 400px;
+    height: 700px;
 }
 
 .otsikko {
@@ -35,6 +87,10 @@ p, a {
     overflow: hidden;
     display: table;
     width: 100%;
+    position: fixed;
+    background-color: #c5ab94;
+    opacity: 0.7;
+    
 }
 
 .navbar ul {
@@ -45,6 +101,7 @@ p, a {
     padding: 0px;
     overflow: hidden;
     text-transform: uppercase;
+    float: right;
 }
 
 .navbar li {
@@ -67,20 +124,6 @@ p, a {
     
 }
 
-.fl-center {
-    text-align: center;
-}
-.fl-left{
-    text-align: left;
-}
-
-.fl-right {
-    text-align: right;
-}
- 
-@media screen and (max-width: 600px) {
-    .navbar, ul.nav {float: none;}
-}
 
 
 /* E N D NAVIGOINTI
@@ -88,103 +131,181 @@ p, a {
 
 /* TAPATHTUMA
 -------------------------------------------------------------*/
-.tapahtumat {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    border: 3px solid red;
-    margin-top: 30px;
-}
-
-.valiotsikko {
-    font-size: 20px;
+.tapahtumat .valiotsikko {
     text-align: center;
 }
+
+.tapahtumat .alaotsikko {
+    text-align: center;
+}
+
+.kalenteri {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 50px;
+}
+
+.tapahtumat table {
+    border-collapse: collapse;
+    color: black;
+    border-style: solid;
+    border-color: #c5ab94;
+}
+
+.näyttelyt_nyt {
+    text-align: center;
+}
+
+.poiminta {
+    text-align: center;
+}
+
+
 
 /* E N D TAPAHTUMAT
 --------------------------------------------------------------*/
+
+
 /* TAITEILIJAT
 -------------------------------------------------------------*/
-.taiteilijat {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    border: 3px solid purple;
-    margin-top: 30px;
-}
-
-.valiotsikko {
-    font-size: 20px;
+.taiteilijat .valiotsikko {
     text-align: center;
 }
 
-.taiteilija_vasen{
-    float: left;
+.rivi2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.taiteilija_vasen {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.kuva_ainosta .kuva_aino {
+    border-radius: 50%;
+}
+
+.kuva_leosta .kuva_leo {
+    border-radius: 50%;
 }
 
 .taiteilija_oikea {
-    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 /* E N D TAITEILIJAT
 --------------------------------------------------------------*/
+
+
 /* TIETOA MIASTA
 -------------------------------------------------------------*/
-.tietoa {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    border: 3px solid brown;
-    margin-top: 30px;
-}
 
-.valiotsikko {
-    font-size: 20px;
+.tietoa .valiotsikko {
     text-align: center;
 }
 
-.mia {
-    height: 150px;
-    border-radius: 60%;
-    float: right;
+.rivi3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+.kuva_mia {
+    text-align: center;
+}
 
+.mia{
+    border-radius: 60%;
+}
 
 /* E N D TIETOA MIASTA
 --------------------------------------------------------------*/
-/* YHTEYSTIEDOT
+
+
+/* OTA YHTEYTTÄ
 -------------------------------------------------------------*/
-.yhteystiedot {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    border: 3px solid green;
-    margin-top: 30px;
+
+
+/* E N D OTA YHTEYTTÄ
+--------------------------------------------------------------*/
+
+
+/* FOOTER
+-------------------------------------------------------------*/
+
+.footer {
+    background-color: #c5ab94;
 }
 
-.valiotsikko {
-    font-size: 20px;
+.footer .valiotsikko {
     text-align: center;
 }
 
-.jotain {
+.rivi5 {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
-/* E N D YHTEYSTIEDOT
---------------------------------------------------------------*/
-/* FOOTER
--------------------------------------------------------------*/
-#footer {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    border: 3px solid blue;
-    margin-top: 30px;
+
+.kartta {
+    text-align: center;
 }
+
+.maps {
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+    padding-bottom: 16px;
+}
+
+.osoite {
+    text-align: center;
+}
+
+.aukioloajat{
+    text-align: center;
+}
+
+/* SOME */
+
+.some .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.some .fa:hover {
+    opacity: 0.7;
+    background-color: #6f4521;
+  }
+
+.some .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.some .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
 
 /* E N D FOOTER
 --------------------------------------------------------------*/

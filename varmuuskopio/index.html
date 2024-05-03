@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html lang="fi">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
         <!-- meta tagit -->
         <meta charset="UTF-8">
-        <!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
          <!-- yhditetään css tiedosto -->
         <link rel="stylesheet" href="style.css" type="text/css">
@@ -18,76 +18,159 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
         <!-- iconit -->
-        <!--link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet"-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <title>Mia Maalaa</title>
+        <title>Mia Maalaa - Taide lähemmäksi ihmistä</title>
+
+
     </head>
     <body id="body">
+        <div class="">
         <!-- navigointi background -->
-        <div class="tausta">
+            <div class="tausta">
             
             <!-- Navigointi -->
             
-            <div class="navbar">
-                <header class="logo fl-left">
-                    <h1 class="otsikko">Mia Maalaa</h1>
-                </header>
-                <ul class="nav fl-right">
-                    <li class="menu" >
-                        <a href="index.html">Koti</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#tapahtumat">Tapahtumat</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#taiteilijat">Taiteilijat</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#tietoa">Tietoa Miasta</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#yhteystiedot">Yhteystiedot</a>
-                    </li>
-                </ul>
-            </div>        
+                <div class="navbar col-s-12 col-12">
+                    <header class="logo  col-s-3 col-3">
+                        <h1 class="otsikko">Mia Maalaa</h1>
+                    </header>
+                    <ul class="nav">
+                        <li class="menu" >
+                            <a href="index.html">Koti</a>
+                        </li>
+                        <li class="menu">
+                            <a href="tapahtumat.html">Tapahtumat</a>
+                        </li>
+                        <li class="menu">
+                            <a href="#taiteilijat">Taiteilijat</a>
+                        </li>
+                        <li class="menu">
+                            <a href="#tietoa">Tietoa Miasta</a>
+                        </li>
+                        <li class="menu">
+                            <a href="#footer">Ota yhteyttä</a>
+                        </li>
+                    </ul>
+                </div>        
             <!-- E N D Navigointi E N D -->           
-        </div>
+            </div>
         <!-- E N D navigointi background-->
+        </div>
 
         <!-- TAPAHTUMAT -->
-        <div class="tapahtumat" id="tapahtumat">
-            <div class="">
-            <h2 class="valiotsikko">Tapahtumat</h2>
-            </div>
-            <div>
-                <h4>Ajankohtaista</h4>
+        <div class="col-12 col-s-12">
+            <div class="tapahtumat" id="tapahtumat">
+                <div class="valiotsikko">
+                <h2 >Tapahtumat</h2>
+                </div>
+                <div class="alaotsikko">
+                    <h4>Ajankohtaista</h4>
+                </div>
+                <div class="rivi1 col-s-12 col-12">
+                    <div class="kalenteri col-s-4 col-4">
+                        <h4 style="color: #b99a7f;">Toukokuu 2024</h4>
+                        <table cellspacing="5" cellpadding="10">
+                            <tr>
+                                <th style="background: #c5ab94;">maanantai</th>
+                                <th style="background: #c5ab94;">Tiistai</th>
+                                <th style="background: #c5ab94;">Keskiviikko</th>
+                                <th style="background: #c5ab94;">Torstai</th>
+                                <th style="background: #c5ab94;">Perjantai</th>
+                                <th style="background: #c5ab94;">Lauantai</th>
+                                <th style="background: #c5ab94;">Sunnuntai</th>
+                            </tr>
+                            <tr>
+                                <td>Suljettu</td>
+                                <td>Maalaus</td>
+                                <td>Savi</td>
+                                <td>Piirrustus</td>
+                                <td>Jotain</td>
+                                <td>jotain</td>
+                                <td> Suljettu</td>
+                            </tr>
+                            <tr>
+                                <td>Suljettu</td>
+                                <td>Savi</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>Suljettu</td>
+                            </tr>
+                            <tr>
+                                <td>Suljettu</td>
+                                <td>Piirrustus</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>Suljettu</td>
+                            </tr>
+                            <tr>
+                                <td>Suljettu</td>
+                                <td>Erikois</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>jotain</td>
+                                <td>Suljettu</td>
+                                </td>
+                             </tr>
+                        </table>
+                    </div>                
+                    <div class="näyttelyt_nyt col-s-4 col-4">
+                        <img class="aino" src="kuvat/Aino_Artisaari.webp" alt="Aino Artisaaren kuva" width="220" height="300">
+                        <h4>Näyttelynä nyt</h4>
+                        <p>Aino Artisaari</p>
+                        <button><a href="aino.html" >Lue lisää</a></button>
+                    </div>
+                    <div class="poiminta col-s-4 col-4">
+                        <img class="poiminta_kuva" src="kuvat/Kesäyön_kaiku.webp" alt="kesäyö" width="250" height="250">
+                        <h4>Poiminta valikoimastamme</h4>
+                        <p>Tällä kertaa nostona teosvalikoimastamme on Aino Artisaari<br> öljyvärimaalaus "Kesäyön kaiku"</p>
+                        <button><a href="aino.html">Lue lisää</a></button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- E N D TAPAHTUMAT E N D-->
 
         <!-- TAITEILIJAT -->
-        <div class="taiteilijat" id="taiteilijat">
-            <div class="valiotsikko">
-                <h2 >Taiteilijat</h2>
-                <p>Esittelyitä yhteistyötaiteilijoistamme.</p>
-            </div>
-            <div class="taiteilija_vasen">
-                <div class="taiteilijan_nimi">
-                    <h4>Aino Artisaari</h4>
-                    <div class="taiteilijan_teksti">
-                        <p>Aino Artisaari on helsinkiläinen kuvataiteilija, 
-                            joka on tullut tunnetuksi värikkäistä ja ekspressiivisistä maalauksistaan.</p>
-                        <button><a href="aino.html" target="_blank">Lue lisää</a></button>    
-                    </div>
+        <div class="col-12 col-s-12">
+            <div class="taiteilijat" id="taiteilijat">
+                <div class="valiotsikko">
+                    <h2>Taiteilijat</h2>
+                    <p>Esittelyitä yhteistyötaiteilijoistamme.</p>
                 </div>
-            </div>
-            <div class="taiteilija_oikea">
-                <div class="taiteilijan_nimi">
-                    <h4>Leo Luova</h4>
-                    <div class="taiteilijan_teksti">
-                        <p> Leo Luova on turkulainen veistäjä, 
-                            jonka päämateriaalina on kierrätetty metalli.</p>
-                        <button><a href="leo.html" target="_blank">Lue lisää</a></button>    
+                   <div class="rivi2">
+                    <div class="taiteilija_vasen col-s-6 col-6">
+                        <div class="taiteilijan_nimi">
+                            <div class="kuva_ainosta">
+                                <img class="kuva_aino" src="kuvat/Aino_Artisaari2.jpg" alt="kuva ainosta" width="220" height="300">
+                            </div>
+                            <div class="taiteilijan_nimi">
+                                <h4>Aino Artisaari</h4>
+                                <div class="taiteilijan_teksti">
+                                    <p>Aino Artisaari on helsinkiläinen kuvataiteilija,<br>
+                                        joka on tullut tunnetuksi värikkäistä ja ekspressiivisistä maalauksistaan.</p>
+                                    <button><a href="aino.html">Lue lisää</a></button>  
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="taiteilija_oikea col-s-6 col-6">
+                        <div class="taiteilijan_nimi">
+                            <div class="kuva_leosta">
+                                <img class="kuva_leo" src="kuvat/Leo_Luova2.jpg" alt="kuva leosta" width="220" height="300">
+                            </div>
+                            <h4>Leo Luova</h4>
+                            <div class="taiteilijan_teksti">
+                                <p>Leo Luova on turkulainen veistäjä,<br>
+                                    jonka päämateriaalina on kierrätetty metalli.</p>
+                                <button><a href="leo.html">Lue lisää</a></button>    
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,60 +178,71 @@
         <!-- E N D TAITEILIJAT E N D -->
 
         <!-- TIETOA MIASTA -->
-        <div class="tietoa" id="tietoa">
-            <div class="">
-                <h2 class="valiotsikko">Tietoa Miasta</h2>
-
-                <div class="info">
-                    <p>Mia Maalaa on intohimoinen taiteen edistäjä ja visionääri, 
-                        joka on perustanut nimeään kantavan taidegallerian rakkaudestaan taidetta ja kulttuuria kohtaan.
-                        Mia on kotoisin Helsingistä ja hän on opiskellut taidehistoriaa ja kuvataidetta Suomen Taideakatemiassa,
-                        mistä hän valmistui kunnianhimoisena tuomaan uusia tuulia Suomen taidekentälle.</p>
-
-                        <div >
-                            <img class="mia" src="kuvat/mia.png" alt="Kuva Miasta">
-
-                            <div class="btn mia_tietoa">
-                                <button type="submit"><a href="Mia.html" target="_blank">Lue lisää</a></button>
-                            </div>
-                        </div>
+        <div class="col-12 col-s-12">
+            <div class="tietoa" id="tietoa">    
+                <div class="valiotsikko">
+                    <h2>Tietoa Miasta</h2>
                 </div>
+                    <div class="info">
+                        <div class="rivi3">
+                            <div class="kuva_mia col-s-4 col-4">
+                                <img class="mia" src="kuvat/mia.png" alt="Kuva Miasta">
+                            </div>
+                            <div class="teksti_info col-s-6 col-s-6">
+                            <p>Mia Maalaa on intohimoinen taiteen edistäjä ja visionääri.<br>
+                                Mia on perustanut nimeään kantavan taidegallerian rakkaudestaan taidetta ja kulttuuria kohtaan.<br>
+                                Mia on kotoisin Helsingistä ja hän on opiskellut taidehistoriaa ja kuvataidetta Suomen Taideakatemiassa,<br>
+                                mistä hän valmistui kunnianhimoisena tuomaan uusia tuulia Suomen taidekentälle.</p>
+                                <div class="btn mia_tietoa">
+                                    <button type="submit"><a href="Mia.html">Lue lisää</a></button>
+                                </div>
+                            </div>                        
+                        </div>                    
+                    </div>
+                
             </div>
         </div>
         <!-- E N D TIETOA MIASTA E N D -->
 
-        <!-- YHTEYSTIEDOT -->
-        <div class="yhteystiedot" id="yhteystiedot">
-            <div class="">
-                <h2 class="valiotsikko">Yhteystiedot</h2>
-            </div>
-            <div class="jotain">
-                <div class="kartta">
-                    <h6>KARTTA</h6>
-                </div>
-                <div class="osoite">
-                    <h4>Mia Maalaa</h4>
-                    <p>Osoite:</p>
-                    <p>Keskikatu 3, 04200 Kerava</p>
-                    <p>mia.maalaa@keuda.fi</p>
-                </div>
-                <div class="aukioloajat">
-                    <h6>Aukioloajat</h6>
-                    <p>ti-ke 11.00-17.00</p>
-                    <p>to 11.00-18.00</p>
-                    <p>pe 11.00-17.00</p>
-                    <p>la 11.00-15.00</p>
-                    <p>su-ma suljettu</p>
-                </div>                    
-            </div>
+        <!-- OTA YHTEYTTÄ -->
+        <div class="otaYhteyttä col-12 col-s-12" id="otaYhteyttä">
+            
         </div>
-        <!-- E N D YHTEYSTIEDOT E N D -->
+        <!-- E N D OTA YHTEYTTÄ E N D -->
 
         <!-- FOOTER -->
-        <footer id="footer">
-            <div class="">
-                <h2 class="valiotsikko">footer</h2>
-            </div>
+        <footer class="footer col-12 col-s-12" id="footer">
+            
+                <div class="valiotsikko">
+                    <h2>Mia Maalaa</h2>
+                </div>
+                <div class="rivi5">
+                    <div class="kartta col-s-4 col-4">
+                <!-- kuva lisätty linkkauksella google mapsiin -->
+                       <a href="https://maps.app.goo.gl/Kt11iEuV2MQHuoEfA" target="_blank"><img class="maps" src="kuvat/googlemaps.PNG" alt="kuva mapsista"></a>
+                    </div>
+                    <div class="osoite col-s-4 col-4">
+                        <h4>Osoite:</h4>
+                        <p>Keskikatu 3, 04200 Kerava</p>
+                        <h4>Puhelinnumero:</h4>
+                        <p>+358 40 1234567</p>
+                        <h4>Sähköposti:</h4>
+                        <p>mia.maalaa@keuda.fi</p>
+                    </div>
+                    <div class="aukioloajat col-s-4 col-4">
+                        <h3>Aukioloajat</h3>
+                        <p>ti-ke 11.00-17.00</p>
+                        <p>to 11.00-18.00</p>
+                        <p>pe 11.00-17.00</p>
+                        <p>la 11.00-15.00</p>
+                        <p>su-ma suljettu</p>
+                        <div class="some">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                        </div>
+                    </div>                    
+                </div>
+            
         </footer>
 
         <!-- E N D Footer E N D -->
