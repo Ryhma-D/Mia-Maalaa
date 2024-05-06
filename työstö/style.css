@@ -231,6 +231,8 @@ display: block;
     flex-wrap: nowrap;
     padding-left: 50px;
     width: 100%;
+    align-content: center;
+    justify-content: center;
 }
 
 .tapahtumat table {
@@ -395,3 +397,43 @@ display: block;
 
 /* E N D FOOTER
 --------------------------------------------------------------*/
+
+/* TAPAHTUMATSIVU */
+
+.kalenteri {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .otsikko {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .paivat {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .paiva {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .tapahtuma-lomake {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .tapahtuma-lomake input[type="date"],
+  .tapahtuma-lomake input[type="text"],
+  .tapahtuma-lomake button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
