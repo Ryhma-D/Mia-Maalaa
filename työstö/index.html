@@ -71,49 +71,49 @@
                         <h4 style="color: #b99a7f;">Toukokuu 2024</h4>
                         <table cellspacing="5" cellpadding="10">
                             <tr>
-                                <th style="background: #c5ab94;">maanantai</th>
-                                <th style="background: #c5ab94;">Tiistai</th>
-                                <th style="background: #c5ab94;">Keskiviikko</th>
-                                <th style="background: #c5ab94;">Torstai</th>
-                                <th style="background: #c5ab94;">Perjantai</th>
-                                <th style="background: #c5ab94;">Lauantai</th>
-                                <th style="background: #c5ab94;">Sunnuntai</th>
+                                <!--th style="background: #c5ab94;">maanantai</th-->
+                                <th style="background: #c5ab94;">Ti</th>
+                                <th style="background: #c5ab94;">Ke</th>
+                                <th style="background: #c5ab94;">To</th>
+                                <th style="background: #c5ab94;">Pe</th>
+                                <th style="background: #c5ab94;">La</th>
+                                <!--th style="background: #c5ab94;">Sunnuntai</th-->
                             </tr>
                             <tr>
-                                <td>Suljettu</td>
+                                <!--td>Suljettu</td-->
                                 <td>Maalaus</td>
                                 <td>Savi</td>
                                 <td>Piirrustus</td>
                                 <td>Jotain</td>
                                 <td>jotain</td>
-                                <td> Suljettu</td>
+                                <!--td>Suljettu</td-->
                             </tr>
                             <tr>
-                                <td>Suljettu</td>
+                               <!--td>Suljettu</td-->
                                 <td>Savi</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
-                                <td>Suljettu</td>
+                                <!--td>Suljettu</td-->
                             </tr>
                             <tr>
-                                <td>Suljettu</td>
+                                <!--td>Suljettu</td-->
                                 <td>Piirrustus</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
-                                <td>Suljettu</td>
+                                <!--td>Suljettu</td-->
                             </tr>
                             <tr>
-                                <td>Suljettu</td>
+                                <!--td>Suljettu</td-->
                                 <td>Erikois</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
                                 <td>jotain</td>
-                                <td>Suljettu</td>
+                                <!--td>Suljettu</td-->
                             </td>
                             </tr>
                         </table>
@@ -177,7 +177,7 @@
         <!-- E N D TAITEILIJAT E N D -->
 
         <!-- TIETOA MIASTA -->
-        <div class="col-12 col-s-12">
+        <section class="col-12 col-s-12">
             <div class="tietoa" id="tietoa">    
                 <div class="valiotsikko">
                     <h2>Tietoa Miasta</h2>
@@ -200,13 +200,31 @@
                     </div>
                 
             </div>
-        </div>
+        </section>
         <!-- E N D TIETOA MIASTA E N D -->
 
         <!-- OTA YHTEYTTÄ -->
-        <div class="otaYhteyttä col-12 col-s-12" id="otaYhteyttä">
-            
-        </div>
+        <section id="contact" class="otaYhteyttä">
+            <h2>Ota yhteyttä</h2>
+            <form action="contact.php" method="POST">
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Sähköposti:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Viesti:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <!-- "En ole botti" -testaus -->
+                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                
+                <button class="btn" type="submit">Lähetä</button>
+            </form>
+        </section>
+        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
         <!-- E N D OTA YHTEYTTÄ E N D -->
 
         <!-- FOOTER -->
