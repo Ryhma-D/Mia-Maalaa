@@ -63,6 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 p, a {
     font-family: 'Merriweather', serif;
 }
+
+.btn a{
+    color:#6f4521;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /* E N D FONTIT E N D */
 
 /* NAVIGOINTI
