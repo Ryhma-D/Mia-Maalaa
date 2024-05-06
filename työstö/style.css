@@ -64,6 +64,10 @@ p, a {
     font-family: 'Merriweather', serif;
 }
 
+.active {
+    background-color: #6f4521;
+}
+
 .btn a{
     color:#6f4521;
     text-align: center;
