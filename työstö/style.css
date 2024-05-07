@@ -224,10 +224,14 @@ display: block;
     text-align: center;
 }
 
-.kalenteri {
+.kuukausiteksti {
+    text-align: center;
+}
+
+.kalenteri1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: nowrap;
     padding-left: 50px;
     width: 100%;
@@ -240,6 +244,8 @@ display: block;
     color: black;
     border-style: solid;
     border-color: #c5ab94;
+    display: table;
+    text-align: center;
 }
 
 .näyttelyt_nyt {
@@ -400,7 +406,7 @@ display: block;
 
 /* TAPAHTUMATSIVU */
 
-.kalenteri {
+.kalenteri2 {
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
