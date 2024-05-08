@@ -1,5 +1,3 @@
-<!-- ihan puhdasta kokeilua vain -->
-<!-- toimiiko? t: Konsta-->
 <!DOCTYPE html>
 <html lang="fi">
     <head>
@@ -12,7 +10,9 @@
         <link rel="stylesheet" href="style.css" type="text/css">
 
         <!-- mahdollistetaan kirjautuminen -->
-        <script type="text/javascript" language="javascript" src="kirjautuminen.JS"></script>
+        <!--script type="text/javascript" language="javascript" src="kirjautuminen.JS"></script-->
+        <script src="scriptit/script.js"></script>
+
 
         <!-- FONTIT -->
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -26,17 +26,18 @@
 
     </head>
     <body id="body">
-        <div class="">
+        <section class="">
         <!-- navigointi background -->
             <div class="tausta">
+                
             
             <!-- Navigointi -->
             
-                <div class="navbar col-s-12 col-12">
+                <div class="navbar col-s-12 col-12" id="navbar">
                     <header class="logo  col-s-3 col-3">
                         <h1 class="otsikko">Mia Maalaa</h1>
                     </header>
-                    <div class="nav col-s-8 col-8">
+                        <div class="nav col-s-8 col-8">
                         <a href="index.html" class="active">Koti</a>                        
                         <a href="tapahtumat.html">Tapahtumat</a>
                         <div class="dropdown">
@@ -55,13 +56,12 @@
             <!-- E N D Navigointi E N D -->           
             </div>
         <!-- E N D navigointi background-->
-        </div>
+        </section>
 
         <!-- TAPAHTUMAT -->
-        <div class="col-12 col-s-12">
-            <div class="tapahtumat" id="tapahtumat">
+        <section class="tapahtumat col-s-12" id="tapahtumat">
                 <div class="valiotsikko">
-                <h2 >Tapahtumat</h2>
+                    <h2 >Tapahtumat</h2>
                 </div>
                 <div class="alaotsikko">
                     <h4>Ajankohtaista</h4>
@@ -117,27 +117,27 @@
                             </td>
                             </tr>
                         </table>
-                    </div>                
-                    <div class="näyttelyt_nyt col-s-4 col-4">
-                        <img class="aino" src="kuvat/Aino_Artisaari.webp" alt="Aino Artisaaren kuva" width="220" height="300">
-                        <h4>Näyttelynä nyt</h4>
-                        <p>Aino Artisaari</p>
-                        <button class="btn"><a href="aino.html" >Lue lisää</a></button>
                     </div>
-                    <div class="poiminta col-s-4 col-4">
-                        <img class="poiminta_kuva" src="kuvat/Kesäyön_kaiku.webp" alt="kesäyö" width="250" height="250">
-                        <h4>Poiminta valikoimastamme</h4>
-                        <p>Tällä kertaa nostona teosvalikoimastamme on Aino Artisaari<br> öljyvärimaalaus "Kesäyön kaiku"</p>
-                        <button class="btn"><a href="aino.html">Lue lisää</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <div class="rivi1_alaRivi col-8 col-s-8">              
+                        <div class="näyttelyt_nyt col-s-4 col-4">
+                            <img class="aino" src="kuvat/Aino_Artisaari.webp" alt="Aino Artisaaren kuva" width="220" height="300">
+                            <h4>Näyttelynä nyt</h4>
+                            <p>Aino Artisaari</p>
+                            <button class="btn"><a href="aino.html" >Lue lisää</a></button>
+                        </div>
+                        <div class="poiminta col-s-4 col-4">
+                            <img class="poiminta_kuva" src="kuvat/Kesäyön_kaiku.webp" alt="kesäyö" width="250" height="250">
+                            <h4>Poiminta valikoimastamme</h4>
+                            <p>Tällä kertaa nostona teosvalikoimastamme on Aino Artisaari<br> öljyvärimaalaus "Kesäyön kaiku"</p>
+                            <button class="btn"><a href="aino.html">Lue lisää</a></button>
+                        </div>
+                    </div> 
+                </div>            
+        </section>
         <!-- E N D TAPAHTUMAT E N D-->
 
         <!-- TAITEILIJAT -->
-        <div class="col-12 col-s-12">
-            <div class="taiteilijat" id="taiteilijat">
+        <section class=" taiteilijat col-12 col-s-12" id="taiteilijat">
                 <div class="valiotsikko">
                     <h2>Taiteilijat</h2>
                     <p>Esittelyitä yhteistyötaiteilijoistamme.</p>
@@ -171,14 +171,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>            
+        </section>
         <!-- E N D TAITEILIJAT E N D -->
 
         <!-- TIETOA MIASTA -->
-        <section class="col-12 col-s-12">
-            <div class="tietoa" id="tietoa">    
+        <section class="tietoa col-12 col-s-12" id="tietoa">    
                 <div class="valiotsikko">
                     <h2>Tietoa Miasta</h2>
                 </div>
@@ -198,15 +196,13 @@
                             </div>                        
                         </div>                    
                     </div>
-                
-            </div>
         </section>
         <!-- E N D TIETOA MIASTA E N D -->
 
         <!-- OTA YHTEYTTÄ -->
-        <section id="contact" class="otaYhteyttä">
+        <section id="contact" class="otaYhteyttä col-12 col-s-12">
             <h2>Ota yhteyttä</h2>
-            <form action="contact.php" method="POST">
+            <form class="lomake" action="contact.php" method="POST">
                 <label for="name">Nimi:</label>
                 <input type="text" id="name" name="name" required>
         
@@ -214,7 +210,7 @@
                 <input type="email" id="email" name="email" required>
         
                 <label for="message">Viesti:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" required maxlength="200" rows="8"></textarea>
         
                 <!-- "En ole botti" -testaus -->
                 <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>

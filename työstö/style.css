@@ -81,6 +81,9 @@ p, a {
 /* NAVIGOINTI
 ------------------------------------------------------------*/
 
+
+
+
 .tausta {
     background-image: url(kuvat/galleria6.png);
     /* background-repeat: no-repeat; */
@@ -95,11 +98,12 @@ p, a {
     overflow: hidden;
     /* display: table; */
     /* width: 100%; */
-    /* position: fixed; */
+    position: fixed;
     background-color: #c5ab94;
     opacity: 0.7;
     display: flex;
     justify-content: space-between;
+    z-index: 200;
 }
 
 .logo .otsikko {
@@ -180,11 +184,11 @@ p, a {
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #c5ab94;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 500;
 }
 
 /* linkit dropdownissa */
@@ -224,6 +228,13 @@ display: block;
     text-align: center;
 }
 
+.rivi1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .kuukausiteksti {
     text-align: center;
 }
@@ -246,6 +257,12 @@ display: block;
     border-color: #c5ab94;
     display: table;
     text-align: center;
+}
+
+.rivi1_alaRivi {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .näyttelyt_nyt {
@@ -271,6 +288,7 @@ display: block;
 .rivi2 {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 .taiteilija_vasen {
@@ -332,7 +350,16 @@ display: block;
 
 /* OTA YHTEYTTÄ
 -------------------------------------------------------------*/
+#contact h2 {
+    text-align: center;
+}
 
+#contact .lomake {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 /* E N D OTA YHTEYTTÄ
 --------------------------------------------------------------*/
