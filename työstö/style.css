@@ -504,3 +504,40 @@ display: block;
   .tanaan {
     border: solid #6f4521;
   }
+
+  /* TAITEILIJAT
+  -------------------------------------------------*/
+
+.artisaari h1 {
+    text-align: center  ;
+}
+
+.kuvausAino {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.kuvausAino img {
+    border: 10px solid #c5ab94;
+}
+
+.valiotsikko {
+    text-align: center;
+}
+
+.ainoTeokset {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ainoTeokset img {
+    border: 10px solid #c5ab94;
+}
+
+
+
+  /* E N D TAITEILIJAT 
+  -------------------------------------------------*/
