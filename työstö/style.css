@@ -39,7 +39,7 @@
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
-    .col-2 {width: 25%;}
+    .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
     .col-5 {width: 41.66%;}
     .col-6 {width: 50%;}
@@ -103,7 +103,7 @@ p, a {
     opacity: 0.7;
     display: flex;
     justify-content: space-between;
-    z-index: 200;
+    z-index: 1000;
 }
 
 .logo .otsikko {
@@ -178,6 +178,7 @@ p, a {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    z-index: 200;
 }
 
 /* dropdown content (default piilotettu) */
@@ -458,7 +459,7 @@ display: block;
 .tapahtumakalenteri {
     
     
-:;
+
 }
 
 
