@@ -456,11 +456,7 @@ display: block;
 /* TAPAHTUMATSIVU */
 
    
-.tapahtumakalenteri {
-    
-    
-
-}
+/* .tapahtumakalenteri {} */
 
 
 .kalenteri2 {
@@ -537,6 +533,34 @@ display: block;
     border: 10px solid #c5ab94;
 }
 
+.luova h1 {
+    text-align: center;
+}
+
+.kuvausLeo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.kuvausLeo img {
+    border: 10px solid #c5ab94;
+}
+
+.valiotsikko {
+    text-align: center;
+}
+
+.leoTeokset {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.leoTeokset img {
+    border: 10px solid #c5ab94;
+}
 
 
   /* E N D TAITEILIJAT 
