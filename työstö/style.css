@@ -217,6 +217,23 @@ display: block;
 
 /* E N D NAVIGOINTI
 -------------------------------------------------------------*/
+/* Paluu sivun ylös-nappi */
+
+.ylösnappi {
+    display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6f4521;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 /* TAPATHTUMA
 -------------------------------------------------------------*/
@@ -268,11 +285,15 @@ display: block;
 .näyttelyt_nyt {
     text-align: center;
 }
-
+.aino {
+    border: 10px solid #c5ab94;
+}
 .poiminta {
     text-align: center;
 }
-
+.poiminta_kuva {
+    border: 10px solid #c5ab94;
+}
 
 
 /* E N D TAPAHTUMAT
@@ -433,18 +454,26 @@ display: block;
 
 /* TAPAHTUMATSIVU */
 
+   
+.tapahtumakalenteri {
+    
+    
+:;
+}
+
+
 .kalenteri2 {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid #c5ab94;
   }
   
   .otsikko {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-evenly;
   }
   
   .paivat {
@@ -456,6 +485,7 @@ display: block;
   .paiva {
     border: 1px solid #ccc;
     padding: 10px;
+    border: 2px solid #c5ab94;
   }
   
   .tapahtuma-lomake {
@@ -470,3 +500,6 @@ display: block;
     margin-bottom: 10px;
   }
   
+  .tanaan {
+    border: solid #6f4521;
+  }
