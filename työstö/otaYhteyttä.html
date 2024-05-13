@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html>
     <head>
-        <title>Taiteilija - Leo Luova </title>
+         <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+        <!-- meta tagit -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
          <!-- yhditetään css tiedosto -->
-         <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
 
-          <!-- FONTIT -->
+        <!-- mahdollistetaan kirjautuminen -->
+        <!--script type="text/javascript" language="javascript" src="kirjautuminen.JS"></script-->
+        <script src="scriptit/script.js"></script>
+
+
+        <!-- FONTIT -->
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    
+
         <!-- iconit -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Mia Maalaa - Ota Yhteyttä</title>
+
     </head>
     <body id="body">
+
         <div class="">
             <!-- navigointi background -->
                 <div class="tausta">
@@ -28,16 +41,16 @@
                             <a href="index.html">Koti</a>   
                             <a href="tapahtumat.html">Tapahtumat</a>
                             <div class="dropdown">
-                                <button class="dropbtn"><a href="#taiteilijat" class="active">Taiteilijat</a>
+                                <button class="dropbtn"><a href="#taiteilijat">Taiteilijat</a>
                                     <!--i class=" fa fa-caret-down"></i-->
                                 </button>
                                 <div class="dropdown-content">
                                     <a href="aino.html">Aino Artisaari</a>
-                                    <a href="leo.html" class="active">Leo Luova</a>
+                                    <a href="leo.html">Leo Luova</a>
                                 </div>
                             </div>                        
                             <a href="Mia.html">Tietoa Miasta</a>                    
-                            <a href="otaYhteyttä.html">Ota yhteyttä</a>                        
+                            <a href="otaYhteyttä.html" class="active">Ota yhteyttä</a>                        
                         </div>
                     </div>        
                 <!-- E N D Navigointi E N D -->           
@@ -45,41 +58,29 @@
             <!-- E N D navigointi background-->
             </div>
 
-        <section class="luova col-s-12 col-12">
-            
-            <h1>Mia Maalaa - Taidegallerian taiteilija Leo Luova</h1>
-            <div class="kuvausLeo col-s-12 col-12">
 
-                <img src="kuvat/Leo_Luova.webp" alt="Taiteilija Aino Artisaari" width="300" height="400">
-
-                <p>Leo Luova on turkulainen veistäjä, 
-                    jonka päämateriaalina on kierrätetty metalli. 
-                    Leo on opiskellut kuvanveistoa Turun Taideakatemiassa ja valmistunut vuonna 2015. 
-                    Hän on tunnettu kyvystään luoda kompleksisia, 
-                    abstrakteja muotoja yksinkertaisista materiaaleista. 
-                    Leolle taide on keino tutkia teollisuuden ja luonnon suhteita, 
-                    ja hänen veistoksensa heijastavat sekä mekaanisen että orgaanisen maailman esteettisiä ja toiminnallisia piirteitä.</p>
-            </div>
-        </section>
-
-        <section class="leo_taide col-s-12 col-12">
-            <div class="valiotsikko">
-            <h3>Teokset</h3>
-            </div>
-            <div class="leoTeokset">
-                <img src="kuvat/Ajan_henki.webp" alt="Taiteilija Aino Artisaaren teos Kesäyön kaiku" width="400" height="400">
-                <div class="hinta">
-                    <p>Kuvaus teoksesta</p>
-                    <h4>Hinta:</h4>
-                    <p>22 000 €</p>
-                    <button class="btn" onclick=>Lisätietoja teoksesta</button>
-                </div>
-            </div>
-        </section>
-            
+        <section id="contact" class="otaYhteyttä col-12 col-s-12">
+            <h2>Ota yhteyttä</h2>
+            <form class="lomake" action="contact.php" method="POST">
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
         
+                <label for="email">Sähköposti:</label>
+                <input type="email" id="email" name="email" required>
         
-            <!-- FOOTER -->
+                <label for="message">Viesti:</label>
+                <textarea id="message" name="message" required maxlength="200" rows="8"></textarea>
+        
+                <!-- "En ole botti" -testaus -->
+                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                
+                <button class="btn" type="submit">Lähetä</button>
+            </form>
+        </section>
+        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <!-- FOOTER -->
         <footer class="footer col-12 col-s-12" id="footer">
             
             <div class="valiotsikko">
@@ -112,9 +113,8 @@
                 </div>                    
             </div>
         
-        </footer>
+    </footer>
 
     <!-- E N D Footer E N D -->
     </body>
-
 </html>
