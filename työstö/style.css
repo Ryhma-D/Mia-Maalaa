@@ -342,6 +342,18 @@ display: block;
     align-items: center;
 }
 
+.kuvausAino p {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.kuvausLeo p {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 
 
 /* E N D TAITEILIJAT
@@ -368,6 +380,24 @@ display: block;
 }
 
 .mia{
+    border-radius: 60%;
+}
+
+.maalaa h1 {
+    text-align: center;
+}
+
+.maalaa p {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.kuvaMia{
+    text-align: center;
+}
+
+.kuvaMia img {
     border-radius: 60%;
 }
 
