@@ -346,8 +346,9 @@ display: block;
 
 .rivi1_alaRivi {
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .näyttelyt_nyt {
