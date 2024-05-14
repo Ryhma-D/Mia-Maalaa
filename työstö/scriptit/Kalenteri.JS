@@ -1,67 +1,62 @@
-const kuukaudet = ["Tammikuu", "Helmikuu", "Maaliskuu", "Huhtikuu", "Toukokuu", "Kesäkuu", "Heinäkuu", "Elokuu", "Syyskuu", "Lokakuu", "Marraskuu", "Joulukuu"];
+document.addEventListener("DOMContentLoaded", function() {
+  const kalenteri = document.getElementById("kalenteri");
+  const tänään = new Date();
+  const nykyinenKuukausi = tänään.getMonth();
+  const nykyinenVuosi = tänään.getFullYear();
+  const kuukaudenPäivät = new Date(nykyinenVuosi, nykyinenKuukausi + 1, 0).getDate();
+  const aloituspäivä = new Date(nykyinenVuosi, nykyinenKuukausi, 1).getDay();
 
-            let nykyinenKuukausi = new Date().getMonth();
-            let nykyinenVuosi = new Date().getFullYear();
-            
-            const kuukausiVuosiElementti = document.getElementById("kuukausiVuosi");
-            const paivatElementti = document.querySelector(".paivat");
-            
-            document.getElementById("edellinenBtn").addEventListener("click", () => {
-              nykyinenKuukausi -= 1;
-              if (nykyinenKuukausi < 0) {
-                nykyinenKuukausi = 11;
-                nykyinenVuosi -= 1;
-              }
-              paivitaKalenteri();
-            });
-            
-            document.getElementById("seuraavaBtn").addEventListener("click", () => {
-              nykyinenKuukausi += 1;
-              if (nykyinenKuukausi > 11) {
-                nykyinenKuukausi = 0;
-                nykyinenVuosi += 1;
-              }
-              paivitaKalenteri();
-            });
-            
-            function paivitaKalenteri() {
-              kuukausiVuosiElementti.textContent = `${kuukaudet[nykyinenKuukausi]} ${nykyinenVuosi}`;
-              paivatElementti.innerHTML = "";
-            
-              const paiviaKuukaudessa = new Date(nykyinenVuosi, nykyinenKuukausi + 1, 0).getDate();
-            
-              for (let i = 1; i <= paiviaKuukaudessa; i++) {
-                const paivaElementti = document.createElement("div");
-                paivaElementti.classList.add("paiva");
-                paivaElementti.textContent = i;
-                paivatElementti.appendChild(paivaElementti);
-              }
-            }
-            
-            function lisaaTapahtuma() {
-              const tapahtumaPvm = document.getElementById("tapahtumaPvm").value;
-              const tapahtumaKuvaus = document.getElementById("tapahtumaKuvaus").value;
-            
-              if (tapahtumaPvm && tapahtumaKuvaus) {
-                const pvm = new Date(tapahtumaPvm);
-                const paiva = pvm.getDate();
-                const paivaElementti = paivatElementti.querySelector(`.paiva:nth-child(${paiva})`);
-            
-                if (paivaElementti) {
-                  const tapahtumaElementti = document.createElement("p");
-                  tapahtumaElementti.textContent = tapahtumaKuvaus;
-                  tapahtumaElementti.addEventListener("click", () => {
-                    if (confirm("Haluatko varmasti poistaa tämän tapahtuman?")) {
-                      tapahtumaElementti.remove();
-                    }
-                  });
-                  paivaElementti.appendChild(tapahtumaElementti);
-                } else {
-                  alert("Virheellinen päivämäärä!");
-                }
-              } else {
-                alert("Syötä sekä päivämäärä että kuvaus!");
-              }
-            }
-            
-            paivitaKalenteri();
+  const viikonpäivät = ["Ma", "Ti", "Ke", "To", "Pe", "La", "Su"];
+
+  // Lisää viikonpäivät
+  for (let i = 1; i <= 7; i++) {
+      const viikonpäiväDiv = document.createElement("div");
+      viikonpäiväDiv.textContent = viikonpäivät[i % 7];
+      kalenteri.appendChild(viikonpäiväDiv);
+  }
+
+  // Lisää tyhjiä soluja kuukauden alkuun saakka
+  for (let i = 0; i < aloituspäivä - 1; i++) {
+      const tyhjäDiv = document.createElement("div");
+      kalenteri.appendChild(tyhjäDiv);
+  }
+
+  // Lisää kuukauden päivät ja tapahtumat
+  for (let i = 1; i <= kuukaudenPäivät; i++) {
+      const päiväDiv = document.createElement("div");
+      päiväDiv.textContent = i;
+
+      // Tarkista onko tänään ja lisää luokka jos on
+      if (nykyinenVuosi === tänään.getFullYear() && nykyinenKuukausi === tänään.getMonth() && i === tänään.getDate()) {
+          päiväDiv.classList.add("tänään");
+      }
+
+      // Lisää tapahtumat
+      switch ((aloituspäivä + i - 2) % 7) {
+          case 1: // Tiistai
+              lisääTapahtuma(päiväDiv, "Savikurssit", "18:00");
+              break;
+          case 2: // Keskiviikko
+              lisääTapahtuma(päiväDiv, "Maalaus- ja Piirustuskurssit", "18:00");
+              break;
+          case 3: // Torstai
+              lisääTapahtuma(päiväDiv, "Erikoistyöpajat", "15:00");
+              break;
+          case 4: // Perjantai
+              lisääTapahtuma(päiväDiv, "Digitaalinen taide", "14:00");
+              break;
+          case 5: // Lauantai
+              lisääTapahtuma(päiväDiv, "Lasten työpajat", "14:00");
+              break;
+      }
+
+      kalenteri.appendChild(päiväDiv);
+  }
+});
+
+function lisääTapahtuma(päiväDiv, tapahtuma, aika) {
+  const tapahtumaSpan = document.createElement("span");
+  tapahtumaSpan.classList.add("event");
+  tapahtumaSpan.textContent = tapahtuma + " " + aika;
+  päiväDiv.appendChild(tapahtumaSpan);
+}
