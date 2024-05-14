@@ -33,37 +33,41 @@
     </head>
     <body id="body">
 
-        <div class="">
-            <!-- navigointi background -->
-                <div class="tausta">
-                    
-                
-                <!-- Navigointi -->
-                
-                    <div class="navbar col-s-12 col-12" id="navbar">
-                        <header class="logo  col-s-3 col-3">
-                            <h1 class="otsikko"><a href="index.html">Mia Maalaa</a></h1>
-                        </header>
-                            <div class="nav col-s-8 col-8">
-                            <a href="index.html">Koti</a>   
-                            <a href="tapahtumat.html">Tapahtumat</a>
-                            <div class="dropdown">
-                                <button class="dropbtn"><a href="#taiteilijat">Taiteilijat</a>
-                                    <!--i class=" fa fa-caret-down"></i-->
-                                </button>
-                                <div class="dropdown-content">
-                                    <a href="aino.html">Aino Artisaari</a>
-                                    <a href="leo.html">Leo Luova</a>
-                                </div>
-                            </div>                        
-                            <a href="Mia.html">Tietoa Miasta</a>                    
-                            <a href="otaYhteyttä.html" class="active">Ota yhteyttä</a>                        
+        <div class="tausta">
+            <div class="navbar col-s-12 col-12" id="navbar">
+                <header class="logo  col-s-3 col-3">
+                    <h1 class="otsikko"><a href="index.html">Mia Maalaa</a></h1>
+                </header>
+                <ul class="nav-links col-s-8 col-8" id="nav-links">
+                    <li><a href="tapahtumat.html">Tapahtumat</a></li>
+                    <li class="dropdown">
+                        <a href="#taiteilijat">Taiteilijat</a>
+                        <div class="dropdown-content">
+                            <a href="aino.html">Aino Artisaari</a>
+                            <a href="leo.html">Leo Luova</a>
                         </div>
-                    </div>        
-                <!-- E N D Navigointi E N D -->           
+                    </li>
+                    <li><a href="Mia.html">Tietoa Miasta</a></li>
+                    <li><a href="otaYhteyttä.html">Ota yhteyttä</a></li>
+                </ul>
+                <div class="burger" id="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
-            <!-- E N D navigointi background-->
             </div>
+            <script>
+                // Get the hamburger icon and navigation links
+                const burger = document.getElementById('burger');
+                const navLinks = document.getElementById('nav-links');
+
+                // Add click event listener to the hamburger icon
+                burger.addEventListener('click', () => {
+                    // Toggle the 'active' class on the navigation links
+                    navLinks.classList.toggle('active');
+                });
+            </script>
+        </div>
 
 
         <section id="contact" class="otaYhteyttä col-12 col-s-12">
