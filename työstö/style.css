@@ -539,20 +539,23 @@ display: block;
     grid-template-columns: repeat(7, 1fr);
     border-collapse: collapse;
     border: 1px solid #000;
+    margin: auto;
 }
 
 .num {
-    font-weight: bold;
+    font-weight: lighter;
+    text-align: center;
 }
 
 #kalenteri div {
     border: 1px solid #000;
-    padding: 10px;
-    text-align: left;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
 }
 
 #kalenteri div.tänään {
-    background-color: #f0f0f0;
+    background-color: #c5ab94;
 }
 
 .event {
