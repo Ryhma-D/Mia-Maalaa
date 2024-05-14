@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html>
     <head>
-        <title>Mia Maalaa - Taidegallerian Perustaja ja Omistaja </title>
+         <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+        <!-- meta tagit -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
          <!-- yhditetään css tiedosto -->
-         <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
 
-          <!-- FONTIT -->
+        <!-- mahdollistetaan kirjautuminen -->
+        <!--script type="text/javascript" language="javascript" src="kirjautuminen.JS"></script-->
+        <script src="scriptit/script.js"></script>
+
+
+        <!-- FONTIT -->
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
         <!-- iconit -->
@@ -19,10 +28,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-
+        <title>Mia Maalaa - Ota Yhteyttä</title>
 
     </head>
     <body id="body">
+
         <div class="tausta">
             <div class="navbar col-s-12 col-12" id="navbar">
                 <header class="logo  col-s-3 col-3">
@@ -60,24 +70,28 @@
         </div>
 
 
-        <section class="maalaa col-12 col-s-12">
-            
-            <h1>Mia Maalaa - Taidegallerian Perustaja ja Omistaja</h1>
-
-            <div class="kuvaMia">
-                <img src="kuvat/mia.png" alt="Mia Maalaa">
-            </div>
-            <p>Mia Maalaa on intohimoinen taiteen edistäjä ja visionääri, joka on perustanut nimeään kantavan taidegallerian rakkaudestaan taidetta ja kulttuuria kohtaan. Mia on kotoisin Helsingistä ja hän on opiskellut taidehistoriaa ja kuvataidetta Suomen Taideakatemiassa, mistä hän valmistui kunnianhimoisena tuomaan uusia tuulia Suomen taidekentälle.
-
-                Mian visio on luoda tila, jossa sekä tunnetut että nousevat taiteilijat voivat esitellä teoksiaan ja jossa yleisö voi kokea ja kohdata taiteen monimuotoisuuden. Mia on erityisen kiinnostunut siitä, miten taide voi yhdistää ihmisiä ja luoda yhteisöllisyyttä eri kulttuuritaustoista huolimatta.<br><br>
-            
-                Gallerian avaamisen lisäksi Mia on aktiivisesti mukana järjestämässä taidekasvatustyöpajoja ja luentoja, jotka tukevat paikallisia taiteilijoita ja edistävät taiteen saavutettavuutta. Hän on myös tunnettu puolestapuhuja taiteilijoiden oikeuksien ja kestävän kehityksen edistämisessä taidealalla.<br><br>
-            
-                Mian henkilökohtainen tyyli heijastaa hänen taiteellista lähestymistapaansa: hän yhdistelee rohkeasti eri tyylejä ja aikakausia, mikä näkyy niin hänen pukeutumisessaan kuin hänen kuratoimissaan näyttelyissäkin. Mia uskoo, että taide ei ole pelkästään katseltavaksi, vaan myös koettavaksi ja eläväksi osaksi arkipäivää.
-            
-                Mia Maalaa jatkaa innostamistaan ja uudistamistaan taidekentällä, ja hänen galleriansa on tullut tunnetuksi paitsi sen laadukkaista näyttelyistä, myös sen lämpimästä ja kutsuvasta ilmapiiristä, jossa jokainen vierailu tarjoaa uuden mahdollisuuden upota taiteen maailmaan.</p>
+        <section id="contact" class="otaYhteyttä col-12 col-s-12">
+            <h2>Ota yhteyttä</h2>
+            <form class="lomake" action="contact.php" method="POST">
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Sähköposti:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Viesti:</label>
+                <textarea id="message" name="message" required maxlength="200" rows="8"></textarea>
+        
+                <!-- "En ole botti" -testaus -->
+                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                
+                <button class="btn" type="submit">Lähetä</button>
+            </form>
         </section>
-            <!-- FOOTER -->
+        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <!-- FOOTER -->
         <footer class="footer col-12 col-s-12" id="footer">
             
             <div class="valiotsikko">
@@ -110,9 +124,8 @@
                 </div>                    
             </div>
         
-        </footer>
+    </footer>
 
     <!-- E N D Footer E N D -->
     </body>
-
 </html>

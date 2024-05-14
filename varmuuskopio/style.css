@@ -39,7 +39,7 @@
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
-    .col-2 {width: 25%;}
+    .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
     .col-5 {width: 41.66%;}
     .col-6 {width: 50%;}
@@ -62,11 +62,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, a {
     font-family: 'Merriweather', serif;
+    font-size: 16px;
 }
+
+.active {
+    background-color: #6f4521;
+}
+
+.btn a{
+    color:#6f4521;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /* E N D FONTIT E N D */
 
 /* NAVIGOINTI
 ------------------------------------------------------------*/
+
+
+
 
 .tausta {
     background-image: url(kuvat/galleria6.png);
@@ -77,24 +93,40 @@ p, a {
     height: 700px;
 }
 
-.otsikko {
+
+.navbar {
+    overflow: hidden;
+    /* display: table; */
+    /* width: 100%; */
+    position: fixed;
+    background-color: #c5ab94;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.otsikko a {
+    font-size: 32px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.logo .otsikko {
     color: white;
     float: left;
     text-transform: uppercase;
 }
 
-.navbar {
-    overflow: hidden;
-    display: table;
-    width: 100%;
-    position: fixed;
-    background-color: #c5ab94;
-    opacity: 0.7;
-    
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.navbar ul {
-    position: -webkit-sticky; /* safari */
+
+
+/* .navbar ul {
+    position: -webkit-sticky; /* safari 
     position: sticky;
     list-style-type: none;
     margin: 0px;
@@ -109,25 +141,167 @@ p, a {
     position:relative; 
     margin:0 15px 0 0; 
     padding:0;
-}
+} */
 
-.navbar li a {
-    display: block;
+/* Navbarin linkit */
+
+.navbar a {
+    /* display: block; */
+    float: left;
     font-size: 16px;
     color: white;
     padding: 14px 16px;
+    text-align: center;
     text-decoration: none;
- }
+    text-transform: uppercase;
+}
 
-.navbar a:hover:not(.active) {
+/*.navbar .nav a:hover:not(.active), .dropdown:hover .dropbtn {
     background-color: #6f4521;
     
+}*/
+
+/* navbar linkkien hover */
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #6f4521;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* dropdown nappi */
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    /* padding: 14px 16px; */
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    z-index: 200;
+}
+
+/* dropdown content (default piilotettu) */
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #c5ab94;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 500;
+}
+
+/* linkit dropdownissa */
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* dropdown linkkien hover */
+
+.dropdown-content a:hover {
+background-color: #6f4521;
+}
+
+/* dropdown hover menu */
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger .line1,
+.burger .line2,
+.burger .line3 {
+    width: 25px;
+    height: 3px;
+    background-color: #6f4521;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .change .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .change .line2 {
+        opacity: 0;
+    }
+
+    .change .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
 
 
 
 /* E N D NAVIGOINTI
 -------------------------------------------------------------*/
+/* Paluu sivun ylös-nappi */
+
+.ylösnappi {
+    display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6f4521;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 /* TAPATHTUMA
 -------------------------------------------------------------*/
@@ -139,12 +313,26 @@ p, a {
     text-align: center;
 }
 
-.kalenteri {
+.rivi1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.kuukausiteksti {
+    text-align: center;
+}
+
+.kalenteri1 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     flex-wrap: nowrap;
     padding-left: 50px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
 }
 
 .tapahtumat table {
@@ -152,16 +340,28 @@ p, a {
     color: black;
     border-style: solid;
     border-color: #c5ab94;
+    display: table;
+    text-align: center;
+}
+
+.rivi1_alaRivi {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .näyttelyt_nyt {
     text-align: center;
 }
-
+.aino {
+    border: 10px solid #c5ab94;
+}
 .poiminta {
     text-align: center;
 }
-
+.poiminta_kuva {
+    border: 10px solid #c5ab94;
+}
 
 
 /* E N D TAPAHTUMAT
@@ -177,6 +377,7 @@ p, a {
 .rivi2 {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 .taiteilija_vasen {
@@ -201,6 +402,18 @@ p, a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.kuvausAino p {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.kuvausLeo p {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 
@@ -232,13 +445,40 @@ p, a {
     border-radius: 60%;
 }
 
+.maalaa h1 {
+    text-align: center;
+}
+
+.maalaa p {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.kuvaMia{
+    text-align: center;
+}
+
+.kuvaMia img {
+    border-radius: 60%;
+}
+
 /* E N D TIETOA MIASTA
 --------------------------------------------------------------*/
 
 
 /* OTA YHTEYTTÄ
 -------------------------------------------------------------*/
+#contact h2 {
+    text-align: center;
+}
 
+#contact .lomake {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 /* E N D OTA YHTEYTTÄ
 --------------------------------------------------------------*/
@@ -309,3 +549,116 @@ p, a {
 
 /* E N D FOOTER
 --------------------------------------------------------------*/
+
+/* TAPAHTUMATSIVU */
+
+   
+/* .tapahtumakalenteri {} */
+
+
+.kalenteri2 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #c5ab94;
+  }
+  
+  .otsikko {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .paivat {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .paiva {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border: 2px solid #c5ab94;
+  }
+  
+  .tapahtuma-lomake {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .tapahtuma-lomake input[type="date"],
+  .tapahtuma-lomake input[type="text"],
+  .tapahtuma-lomake button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .tanaan {
+    border: solid #6f4521;
+  }
+
+  /* TAITEILIJAT
+  -------------------------------------------------*/
+
+.artisaari h1 {
+    text-align: center  ;
+}
+
+.kuvausAino {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.kuvausAino img {
+    border: 10px solid #c5ab94;
+}
+
+.valiotsikko {
+    text-align: center;
+}
+
+.ainoTeokset {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ainoTeokset img {
+    border: 10px solid #c5ab94;
+}
+
+.luova h1 {
+    text-align: center;
+}
+
+.kuvausLeo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.kuvausLeo img {
+    border: 10px solid #c5ab94;
+}
+
+.valiotsikko {
+    text-align: center;
+}
+
+.leoTeokset {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.leoTeokset img {
+    border: 10px solid #c5ab94;
+}
+
+
+  /* E N D TAITEILIJAT 
+  -------------------------------------------------*/

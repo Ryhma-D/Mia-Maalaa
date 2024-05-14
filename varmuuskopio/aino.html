@@ -10,54 +10,95 @@
 
         <!-- iconit -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     </head>
     <body id="body">
 
-         <!-- navigointi background -->
-         <div class="tausta">
-
-            <!-- Navigointi -->
-            
-            <div class="navbar">
-                <header class="logo fl-left">
-                    <h1 class="otsikko">Mia Maalaa</h1>
+        <div class="tausta">
+            <div class="navbar col-s-12 col-12" id="navbar">
+                <header class="logo  col-s-3 col-3">
+                    <h1 class="otsikko"><a href="index.html">Mia Maalaa</a></h1>
                 </header>
-                <ul class="nav fl-right">
-                    <li class="menu" >
-                        <a href="index.html">Koti</a>
+                <ul class="nav-links col-s-8 col-8" id="nav-links">
+                    <li><a href="tapahtumat.html">Tapahtumat</a></li>
+                    <li class="dropdown">
+                        <a href="#taiteilijat">Taiteilijat</a>
+                        <div class="dropdown-content">
+                            <a href="aino.html">Aino Artisaari</a>
+                            <a href="leo.html">Leo Luova</a>
+                        </div>
                     </li>
-                    <li class="menu">
-                        <a href="index.html #tapahtumat">Tapahtumat</a>
-                    </li>
-                    <li class="menu">
-                        <a href="index.html #taiteilijat">Taiteilijat</a>
-                    </li>
-                    <li class="menu">
-                        <a href="index.html #tietoa">Tietoa Miasta</a>
-                    </li>
-                    <li class="menu">
-                        <a href="index.html #footer">Yhteystiedot</a>
-                    </li>
+                    <li><a href="Mia.html">Tietoa Miasta</a></li>
+                    <li><a href="otaYhteyttä.html">Ota yhteyttä</a></li>
                 </ul>
+                <div class="burger" id="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
-            <!-- E N D Navigointi E N D -->
-        </div>   
+            <script>
+                // Get the hamburger icon and navigation links
+                const burger = document.getElementById('burger');
+                const navLinks = document.getElementById('nav-links');
+
+                // Add click event listener to the hamburger icon
+                burger.addEventListener('click', () => {
+                    // Toggle the 'active' class on the navigation links
+                    navLinks.classList.toggle('active');
+                });
+            </script>
+        </div>
         
         <!-- E N D background-->
 
 
              
-        <div class="col-s-12 col-12">
+        <section class="artisaari col-s-12 col-12">
+            
             <h1>Mia Maalaa - Taidegallerian taiteilija Aino Artisaari</h1>
-            <p>Aino Artisaari on helsinkiläinen kuvataiteilija, 
-                joka on tullut tunnetuksi värikkäistä ja ekspressiivisistä maalauksistaan. 
-                Aino on valmistunut Kuvataideakatemiasta vuonna 2010, 
-                ja hänen töitään on ollut esillä lukuisissa yksityis- ja ryhmänäyttelyissä sekä kotimaassa että kansainvälisesti. 
-                Ainon taiteessa yhdistyvät moderni abstrakti ilmaisu ja perinteiset tekniikat uudella ja kiehtovalla tavalla. 
-                Hänen teoksensa tutkivat usein ihmisyyden ja luonnon välistä suhdetta, 
-                ja hän käyttää taiteessaan monipuolisesti sekä akryyli- että öljyvärejä.</p>
-        </div>
+            <div class="kuvausAino col-s-12 col-12">
+
+                <img src="kuvat/Aino_Artisaari.webp" alt="Taiteilija Aino Artisaari" width="300" height="400">
+
+                <p>Aino Artisaari on helsinkiläinen kuvataiteilija, 
+                    joka on tullut tunnetuksi värikkäistä ja ekspressiivisistä maalauksistaan. 
+                    Aino on valmistunut Kuvataideakatemiasta vuonna 2010, 
+                    ja hänen töitään on ollut esillä lukuisissa yksityis- ja ryhmänäyttelyissä sekä kotimaassa että kansainvälisesti.<br><br> 
+                    Ainon taiteessa yhdistyvät moderni abstrakti ilmaisu ja perinteiset tekniikat uudella ja kiehtovalla tavalla. 
+                    Hänen teoksensa tutkivat usein ihmisyyden ja luonnon välistä suhdetta, 
+                    ja hän käyttää taiteessaan monipuolisesti sekä akryyli- että öljyvärejä.</p>
+            </div>
+        </section>
+
+        <section class="aino_taide col-s-12 col-12">
+            <div class="valiotsikko">
+            <h3>Teokset</h3>
+            </div>
+            <div class="ainoTeokset">
+                <img src="kuvat/Kesäyön_kaiku.webp" alt="Taiteilija Aino Artisaaren teos Kesäyön kaiku" width="400" height="400">
+                <div class="hinta">
+                    <p>"Kesäyön Kaiku" on vuonna 2021 valmistunut akryylimaalaus,joka kuvaa keskiyön aurinkoa Suomen saaristossa.<br> 
+                        Teos on täynnä elämää ja liikettä, ja se vangitsee katsojan syvälle kesäisen yön mystiseen tunnelmaan.<br><br>
+                        Värien leikki vesillä ja taivaalla on sekä rauhoittavaa että elävöittävää. 
+                        Ainon kyky välittää valon ja varjon dynamiikka<br> tuo maalaukseen syvyyttä ja kerroksellisuutta, 
+                        mikä kutsuu katsojaa palaamaan teoksen äärelle yhä uudelleen.<br></p>
+                    <h4>Hinta:</h4>
+                    <p>15 000 €</p>
+                    <button class="btn"><a href="otaYhteyttä.html">Tiedustele teoksesta</a></button>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- FOOTER -->
         <footer class="footer col-12 col-s-12" id="footer">
@@ -92,7 +133,7 @@
                 </div>                    
             </div>
         
-    </footer>
+        </footer>
 
     <!-- E N D Footer E N D -->
     </body>
